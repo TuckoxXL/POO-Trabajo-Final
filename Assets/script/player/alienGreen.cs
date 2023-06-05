@@ -2,28 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class player : MonoBehaviour
+public class alienGreen : player
 {
-    private Rigidbody2D rb;
-    public float Forcemultiplier;
-    public float jumforce;
+    private float jumforce;
     public bool canjump;
 
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+
+        jumforce = 7;
         canjump = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        float horizontalforce = Input.GetAxis("Horizontal") * Forcemultiplier;
+        Movilidad();
+        Salto();
+       
+    }
 
-        horizontalforce *= Time.deltaTime;      
-        transform.Translate(horizontalforce, 0, 0);
-
+    public void Salto()
+    {
         if (Input.GetKeyDown(KeyCode.Space) && canjump == false)
         {
             GetComponent<Rigidbody2D>().velocity = new Vector3(0, jumforce, 0);
