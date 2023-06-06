@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class alienYellow : player
+public class alienYellow : player,ICanAttack
 {
     public GameObject bullet;
     public float shotForce;
@@ -21,15 +21,6 @@ public class alienYellow : player
     {
         Movilidad();
         Attack();
-    }
-
-    protected override void Movilidad()
-    {
-        base.Movilidad();
-        float horizontalforce = Input.GetAxis("Horizontal") * Forcemultiplier;
-
-        horizontalforce *= Time.deltaTime;
-        transform.Translate(horizontalforce, 0, 0);
     }
 
     public void Attack()
