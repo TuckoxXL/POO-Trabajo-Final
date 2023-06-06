@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class alienGreen : player
 {
-    private float jumforce;
+    public float jumforce;
     public bool canjump;
 
     // Start is called before the first frame update
     void Start()
     {
-
         jumforce = 7;
         canjump = false;
     }
@@ -18,9 +17,33 @@ public class alienGreen : player
     // Update is called once per frame
     void Update()
     {
-        Movilidad();
+        Dead();
+       Movilidad();
         Salto();
-       
+    }
+
+    protected override void Movilidad()
+    {
+        base.Movilidad();
+
+        float horizontalforce = Input.GetAxis("Horizontal") * Forcemultiplier;
+
+        horizontalforce *= Time.deltaTime;
+        transform.Translate(horizontalforce, 0, 0);
+    }
+
+    protected override void Dead()
+    {
+        base.Dead();
+        if (vidaPlayer <= 0)
+        {
+            Debug.Log("sin vida");
+        }
+    }
+
+    public void restarVida(int vidaRestar)
+    {
+        vidaPlayer -= vidaRestar;
     }
 
     public void Salto()
