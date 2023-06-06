@@ -9,7 +9,6 @@ public class player : MonoBehaviour
     public int vidaPlayer;
  
     protected virtual void Movilidad() { }
-    protected virtual void vida() { }
     protected virtual void Dead() { }
     
 }
