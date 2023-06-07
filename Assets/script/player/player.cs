@@ -8,14 +8,24 @@ public class player : MonoBehaviour, ITakeDamage
     protected float Forcemultiplier;
     [SerializeField]
     protected int vidaPlayer;
+    [SerializeField]
+    protected Animator PlayerAnimator;
+    [SerializeField]
+    protected float horizontalforce;
  
     protected virtual void Movilidad() {
 
-    float horizontalforce = Input.GetAxis("Horizontal") * Forcemultiplier;
+    horizontalforce = Input.GetAxis("Horizontal") * Forcemultiplier;
 
     horizontalforce *= Time.deltaTime;
     transform.Translate(horizontalforce, 0, 0);
 
+
+    }
+
+    public virtual void Animator()
+    {
+        PlayerAnimator.SetFloat("movimientoX", horizontalforce * 100);
 
     }
     

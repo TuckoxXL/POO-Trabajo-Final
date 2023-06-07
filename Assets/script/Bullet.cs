@@ -13,13 +13,13 @@ public class Bullet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        bullet = gameObject.AddComponent<Rigidbody2D>();
+        bullet = gameObject.GetComponent<Rigidbody2D>();
        
     }
 
     private void FixedUpdate()
     {
-       bullet.AddForce(transform.up * shotForce, ForceMode2D.Impulse);
+       bullet.AddForce(transform.right * shotForce, ForceMode2D.Impulse);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
