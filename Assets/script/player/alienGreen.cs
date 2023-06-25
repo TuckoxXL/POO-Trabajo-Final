@@ -13,6 +13,7 @@ public class alienGreen : player
     {
         Movilidad();
         Salto();
+        Interact();
     }
  
     public void Salto()

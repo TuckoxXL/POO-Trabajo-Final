@@ -12,13 +12,17 @@ public class player : MonoBehaviour, ITakeDamage
     protected Animator PlayerAnimator;
     [SerializeField]
     protected float horizontalforce;
- 
-    protected virtual void Movilidad() {
+    [SerializeField]
+    protected bool interact;
 
-    horizontalforce = Input.GetAxis("Horizontal") * Forcemultiplier;
 
-    horizontalforce *= Time.deltaTime;
-    transform.Translate(horizontalforce, 0, 0);
+    protected virtual void Movilidad()
+    {
+
+        horizontalforce = Input.GetAxis("Horizontal") * Forcemultiplier;
+
+        horizontalforce *= Time.deltaTime;
+        transform.Translate(horizontalforce, 0, 0);
 
 
     }
@@ -28,13 +32,29 @@ public class player : MonoBehaviour, ITakeDamage
         PlayerAnimator.SetFloat("movimientoX", horizontalforce * 100);
 
     }
-    
+
     public virtual void TakeDamage(int damage)
     {
         vidaPlayer -= damage;
         if (vidaPlayer <= 0)
         {
             Debug.Log("sin vida");
+        }
+    }
+
+    protected virtual void Interact()
+    {
+        if (Input.GetKeyDown(KeyCode.E) && interact == false)
+        {
+            Debug.Log("toca la E");
+            interact = true;
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "bandera")
+        {
+            Debug.Log("entraste");
         }
     }
 }
