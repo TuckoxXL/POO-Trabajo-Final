@@ -14,6 +14,8 @@ public class player : MonoBehaviour, ITakeDamage
     protected float horizontalforce;
     [SerializeField]
     protected bool interact;
+    [SerializeField]
+    protected AnimatorOverrideController yellowAni;
 
 
     protected virtual void Movilidad()
@@ -40,6 +42,11 @@ public class player : MonoBehaviour, ITakeDamage
         {
             Debug.Log("sin vida");
         }
+    }
+
+    protected virtual void AlienYellow()
+    {
+        GetComponent<Animator>().runtimeAnimatorController = yellowAni as RuntimeAnimatorController;
     }
 
     protected virtual void Interact()
