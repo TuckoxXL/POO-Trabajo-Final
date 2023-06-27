@@ -15,7 +15,7 @@ public class alienYellow : player,ICanAttack
     {
         Movilidad();
         Attack();
-        Animator();
+        //Animator();
     }
 
     public void Attack()
