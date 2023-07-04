@@ -8,6 +8,7 @@ public class alienRed : player
     void Update()
     {
         Movilidad();
+        Interact();
     }
 
 }

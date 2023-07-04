@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class cargarPersonaje : MonoBehaviour
 {
+    public GameObject menuPersonaje;
     public GameObject greenPersonaje;
     public GameObject redPersonaje;
     public GameObject yellowPersonaje;
@@ -24,6 +25,7 @@ public class cargarPersonaje : MonoBehaviour
             greenPersonaje.SetActive(true);
             redPersonaje.SetActive(false);
             yellowPersonaje.SetActive(false);
+            
         }
 
         if (alienRed == true)
@@ -31,6 +33,7 @@ public class cargarPersonaje : MonoBehaviour
             redPersonaje.SetActive(true);
             yellowPersonaje.SetActive(false);
             greenPersonaje.SetActive(false);
+            
 
         }
 
@@ -39,7 +42,7 @@ public class cargarPersonaje : MonoBehaviour
             yellowPersonaje.SetActive(true);
             redPersonaje.SetActive(false);
             greenPersonaje.SetActive(false);
-
+            
         }
     }
 }

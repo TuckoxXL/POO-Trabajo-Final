@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class guardarPersonaje : MonoBehaviour
 {
+    public GameObject menuPersonaje;
     public bool alienGreen;
     public bool alienRed;
     public bool alienYellow;
@@ -49,6 +50,8 @@ public class guardarPersonaje : MonoBehaviour
         PlayerPrefs.SetInt("alienGreenSelect", alienGreen ? 1 : 0);
         PlayerPrefs.SetInt("alienRedSelect", alienRed ? 1 : 0);
         PlayerPrefs.SetInt("alienYellowSelect", alienYellow ? 1 : 0);
+        menuPersonaje.SetActive(false);
+        Time.timeScale = 1;
     }
 
 }

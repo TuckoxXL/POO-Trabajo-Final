@@ -16,7 +16,9 @@ public class player : MonoBehaviour, ITakeDamage
     protected bool interact;
     [SerializeField]
     protected AnimatorOverrideController yellowAni;
-
+    [SerializeField]
+    private GameObject menuPersonaje;
+    
 
     protected virtual void Movilidad()
     {
@@ -54,7 +56,8 @@ public class player : MonoBehaviour, ITakeDamage
         if (Input.GetKeyDown(KeyCode.E) && interact == false)
         {
             Debug.Log("toca la E");
-            interact = true;
+            menuPersonaje.SetActive(true);
+            Time.timeScale = 0;
         }
     }
     private void OnTriggerEnter2D(Collider2D other)
