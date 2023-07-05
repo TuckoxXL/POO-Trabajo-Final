@@ -1,0 +1,4 @@
+interface ICanAttack 
+{
+    void Attack();
+}
