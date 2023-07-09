@@ -10,6 +10,15 @@ public class alienYellow : player,ICanAttack
     public float shotRate;
     public float shotTime;
     public Transform spawnBullet;
+    [SerializeField] 
+    private int saltosExtrasRestantes;
+    [SerializeField] 
+    private int saltosExtras;
+    [SerializeField]
+    private float jumforce = 7;
+    [SerializeField]
+    private bool canjump;
+
 
     void Update()
     {
@@ -17,6 +26,21 @@ public class alienYellow : player,ICanAttack
         Attack();
         //Animator();
         Interact();
+        Salto();
+    }
+
+    public void Salto()
+    {
+        if (Input.GetKeyDown(KeyCode.Space) && canjump)
+        {
+            GetComponent<Rigidbody2D>().velocity = new Vector3(0, jumforce, 0);
+            canjump = false;
+        }
+
+        if (canjump)
+        {
+            saltosExtrasRestantes = saltosExtras;
+        }
     }
 
     public void Attack()
