@@ -34,4 +34,12 @@ public class playerAwareness : MonoBehaviour
             awareOfPlayer = false;
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag =="Player")
+        {
+            Debug.Log("hola");
+        }
+    }
 }
