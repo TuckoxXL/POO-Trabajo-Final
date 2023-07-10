@@ -16,7 +16,7 @@ public class playerAwareness : MonoBehaviour
 
     private void Awake()
     {
-        _player = FindObjectOfType<player>().transform;
+        _player = GameObject.FindWithTag("Player").transform;
     }
 
 
