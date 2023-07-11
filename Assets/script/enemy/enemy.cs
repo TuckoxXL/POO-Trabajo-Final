@@ -5,17 +5,14 @@ using UnityEngine;
 public class enemy : MonoBehaviour
 {
 
-
     public float velocidadEnemigo = 1f;
 
     public Transform player;
 
+    public float vision_range;
 
+    public GameObject range;
 
-    void Start()
-    {
-        
-    }
 
     void Update()
     {

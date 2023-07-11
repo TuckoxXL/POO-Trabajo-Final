@@ -564,6 +564,9 @@ MonoBehaviour:
   floorController: {fileID: 1177188025}
   distance: 1.31
   moveRight: 1
+  vision_range: 4
+  range: {fileID: 1958812656}
+  target: {fileID: 0}
 --- !u!212 &483915543
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -718,6 +721,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerAwarenessDistance: 5
+  player: {fileID: 983278801}
 --- !u!1 &499150607
 GameObject:
   m_ObjectHideFlags: 0
@@ -2074,7 +2078,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1572881251}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.24, y: -3.68, z: -9.024584}
+  m_LocalPosition: {x: -1.89, y: -3.68, z: -9.024584}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2311,7 +2315,7 @@ GameObject:
   - component: {fileID: 1958812659}
   - component: {fileID: 1958812658}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Range
   m_TagString: radioEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2325,8 +2329,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1958812656}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.5519, y: 0.2341, z: 0}
-  m_LocalScale: {x: 2.3116145, y: 2.7291813, z: 1}
+  m_LocalPosition: {x: -1.94, y: 0.8416, z: 0}
+  m_LocalScale: {x: 5.1061254, y: 3.9442127, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 483915544}

@@ -14,6 +14,10 @@ public class playerAwareness : MonoBehaviour
 
     private Transform _player;
 
+    public Transform player;
+
+    private float enemySpeed;
+
     private void Awake()
     {
         _player = GameObject.FindWithTag("Player").transform;
@@ -28,6 +32,11 @@ public class playerAwareness : MonoBehaviour
         if (enemyToPlayerVector.magnitude <= _playerAwarenessDistance)
         {
             awareOfPlayer = true;
+
+            if (awareOfPlayer == true)
+            {
+                transform.position = Vector2.MoveTowards(transform.position, new Vector2(player.position.x, transform.position.y), enemySpeed * Time.deltaTime);
+            }
         }
         else
         {
@@ -37,9 +46,10 @@ public class playerAwareness : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag =="Player")
+        if (other.tag == "Player")
         {
             Debug.Log("hola");
+            awareOfPlayer = true;
         }
     }
 }
