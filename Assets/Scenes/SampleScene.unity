@@ -564,9 +564,6 @@ MonoBehaviour:
   floorController: {fileID: 1177188025}
   distance: 1.31
   moveRight: 1
-  vision_range: 4
-  range: {fileID: 1958812656}
-  target: {fileID: 0}
 --- !u!212 &483915543
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -717,11 +714,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 483915541}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 187006f06637ea44c8f75e5d5d058f1d, type: 3}
+  m_Script: {fileID: 11500000, guid: cf4f6ace9c00e94479300415e89c778c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerAwarenessDistance: 5
-  player: {fileID: 983278801}
+  velocity: 6
+  atacando: 0
+  vision_range: 3
+  rango_ataque: 2
+  range: {fileID: 1958812656}
+  target: {fileID: 1572881251}
 --- !u!1 &499150607
 GameObject:
   m_ObjectHideFlags: 0
@@ -2065,8 +2066,8 @@ GameObject:
   - component: {fileID: 1572881252}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Player
-  m_Icon: {fileID: 0}
+  m_TagString: Untagged
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1

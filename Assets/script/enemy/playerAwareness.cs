@@ -49,7 +49,7 @@ public class playerAwareness : MonoBehaviour
         if (other.tag == "Player")
         {
             Debug.Log("hola");
-            awareOfPlayer = true;
+            
         }
     }
 }
