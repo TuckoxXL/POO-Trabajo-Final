@@ -8,11 +8,14 @@ public class key : MonoBehaviour
     public delegate void KeyEvent();
     public static KeyEvent keyEvent;
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        keyEvent?.Invoke();
-        keyManager.keys += 1;
-        Destroy(gameObject,0.1f);
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            keyEvent?.Invoke();
+            keyManager.keys += 1;
+            Destroy(gameObject, 0.1f);
 
+        }
     }
 }
