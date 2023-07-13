@@ -12,7 +12,7 @@ public class keyManager : MonoBehaviour
 
     void KeyText()
     {
-        keyText.text = "KEY: " + keys;
+        keyText.text = "KEY: " + keys + "/3";
     }
     private void OnEnable()
     {
