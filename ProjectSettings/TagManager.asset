@@ -7,6 +7,7 @@ TagManager:
   - Floor
   - bandera
   - coin
+  - Key
   layers:
   - Default
   - TransparentFX
