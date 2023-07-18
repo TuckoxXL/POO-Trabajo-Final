@@ -137,7 +137,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 691044053754478539, guid: aed02f0b4b073af439c93b8d077e4676, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2679369654343320397, guid: aed02f0b4b073af439c93b8d077e4676, type: 3}
       propertyPath: m_RootOrder
@@ -182,6 +182,10 @@ PrefabInstance:
     - target: {fileID: 2679369654343320397, guid: aed02f0b4b073af439c93b8d077e4676, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5813081527783228777, guid: aed02f0b4b073af439c93b8d077e4676, type: 3}
+      propertyPath: jumforce
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5813081527783228777, guid: aed02f0b4b073af439c93b8d077e4676, type: 3}
       propertyPath: menuPersonaje
@@ -311,7 +315,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!111 &480638720
 Animation:
   m_ObjectHideFlags: 0
@@ -1109,7 +1112,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &983278801 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8403329075281866645, guid: f3eba2da572b97e42b887d871b57c460, type: 3}
@@ -1668,7 +1670,6 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
