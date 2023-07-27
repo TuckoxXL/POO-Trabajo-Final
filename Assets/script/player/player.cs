@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class player : MonoBehaviour, ITakeDamage
 {
@@ -59,6 +60,11 @@ public class player : MonoBehaviour, ITakeDamage
         if (other.tag == "bandera")
         {
             Debug.Log("entraste");
+        }
+
+        if (other.tag == "limit")
+        {
+            SceneManager.LoadScene("Derrota");
         }
     }
 }

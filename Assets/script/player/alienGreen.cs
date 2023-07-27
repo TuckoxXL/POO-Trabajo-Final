@@ -22,7 +22,7 @@ public class alienGreen : player
         if (Input.GetKeyDown(KeyCode.Space) && canjump == false)
         {
             GetComponent<Rigidbody2D>().velocity = new Vector3(0, jumforce, 0);
-            canjump = false;
+            canjump = true;
         }
     }
 
@@ -30,7 +30,7 @@ public class alienGreen : player
     {
         if (collision.gameObject.CompareTag("Floor"))
         {
-            canjump = true;
+            canjump = false;
         }
     }
 }
