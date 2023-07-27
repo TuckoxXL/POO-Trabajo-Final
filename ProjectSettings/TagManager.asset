@@ -8,6 +8,7 @@ TagManager:
   - bandera
   - coin
   - Key
+  - Diamond
   layers:
   - Default
   - TransparentFX
