@@ -9,16 +9,17 @@ public class player : MonoBehaviour, ITakeDamage
     [SerializeField]
     protected int vidaPlayer;
     [SerializeField]
-    protected Animator PlayerAnimator;
-    [SerializeField]
     protected float horizontalforce;
     [SerializeField]
     protected bool interact;
     [SerializeField]
-    protected AnimatorOverrideController yellowAni;
-    [SerializeField]
     private GameObject menuPersonaje;
-    
+    [SerializeField]
+    protected Transform ubicacionPlayer;
+    public float distanceBeetween;
+
+    public float distance;
+
 
     protected virtual void Movilidad()
     {
@@ -28,13 +29,11 @@ public class player : MonoBehaviour, ITakeDamage
         horizontalforce *= Time.deltaTime;
         transform.Translate(horizontalforce, 0, 0);
 
-
-    }
-
-    public virtual void Animator()
-    {
-        PlayerAnimator.SetFloat("movimientoX", horizontalforce * 100);
-
+        if (distance < distanceBeetween)
+        {
+            transform.position = Vector2.MoveTowards(this.transform.position, ubicacionPlayer.transform.position, horizontalforce * Time.deltaTime);
+        }
+        
     }
 
     public virtual void TakeDamage(int damage)
@@ -44,11 +43,6 @@ public class player : MonoBehaviour, ITakeDamage
         {
             Debug.Log("sin vida");
         }
-    }
-
-    protected virtual void AlienYellow()
-    {
-        GetComponent<Animator>().runtimeAnimatorController = yellowAni as RuntimeAnimatorController;
     }
 
     protected virtual void Interact()

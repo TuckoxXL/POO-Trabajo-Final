@@ -24,7 +24,6 @@ public class alienYellow : player,ICanAttack
     {
         Movilidad();
         Attack();
-        //Animator();
         Interact();
         Salto();
     }
@@ -54,6 +53,7 @@ public class alienYellow : player,ICanAttack
                 newbullet.GetComponent<Rigidbody2D>().AddForce(spawnBullet.forward * shotForce);
                 shotTime = Time.time + shotRate;
                 Destroy(newbullet, 1);
+
             }
         }
     }
