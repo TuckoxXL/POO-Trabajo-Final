@@ -415,13 +415,13 @@ MonoBehaviour:
   m_HorizontalDamping: 0.5
   m_VerticalDamping: 0.5
   m_ScreenX: 0.5
-  m_ScreenY: 0.5
+  m_ScreenY: 0.59
   m_DeadZoneWidth: 0
   m_DeadZoneHeight: 0
-  m_SoftZoneWidth: 0.8
-  m_SoftZoneHeight: 0.8
-  m_BiasX: 0
-  m_BiasY: 0
+  m_SoftZoneWidth: 0.5
+  m_SoftZoneHeight: 0.5
+  m_BiasX: -0.005
+  m_BiasY: -0.093
   m_CenterOnActivate: 1
 --- !u!114 &320480115
 MonoBehaviour:
@@ -523,8 +523,8 @@ MonoBehaviour:
   m_StreamingVersion: 20170927
   m_Priority: 10
   m_StandbyUpdate: 2
-  m_LookAt: {fileID: 1287743802}
-  m_Follow: {fileID: 1287743802}
+  m_LookAt: {fileID: 377204478}
+  m_Follow: {fileID: 377204478}
   m_Lens:
     FieldOfView: 60
     OrthographicSize: 5.2
@@ -551,8 +551,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 341704113}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.5, y: -2.493215, z: -10}
+  m_LocalRotation: {x: -0.046647094, y: -1e-45, z: -0, w: 0.99891144}
+  m_LocalPosition: {x: -0.12, y: -3.044315, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -848,8 +848,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.38, y: 0.5511, z: -10}
+  m_LocalRotation: {x: -0.046647094, y: -1e-45, z: -0, w: 0.99891144}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1660,6 +1660,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1495789958}
     - target: {fileID: 8403329074449765589, guid: f3eba2da572b97e42b887d871b57c460, type: 3}
+      propertyPath: transformPadre
+      value: 
+      objectReference: {fileID: 377204478}
+    - target: {fileID: 8403329074449765589, guid: f3eba2da572b97e42b887d871b57c460, type: 3}
       propertyPath: ubicacionPlayer
       value: 
       objectReference: {fileID: 377204478}
@@ -2365,12 +2369,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1495789958}
     - target: {fileID: 5813081527783228777, guid: aed02f0b4b073af439c93b8d077e4676, type: 3}
+      propertyPath: transformPadre
+      value: 
+      objectReference: {fileID: 377204478}
+    - target: {fileID: 5813081527783228777, guid: aed02f0b4b073af439c93b8d077e4676, type: 3}
       propertyPath: ubicacionPlayer
       value: 
       objectReference: {fileID: 377204478}
     - target: {fileID: 5813081527783228777, guid: aed02f0b4b073af439c93b8d077e4676, type: 3}
       propertyPath: distanceBeetween
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5813081527783228777, guid: aed02f0b4b073af439c93b8d077e4676, type: 3}
+      propertyPath: horizontalforceTransform
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9024,6 +9036,10 @@ PrefabInstance:
       propertyPath: menuPersonaje
       value: 
       objectReference: {fileID: 1495789958}
+    - target: {fileID: 2144718846041045710, guid: 506fcb7e0f6a7574c98cadbceda59aa5, type: 3}
+      propertyPath: transformPadre
+      value: 
+      objectReference: {fileID: 377204478}
     - target: {fileID: 4062858010918075362, guid: 506fcb7e0f6a7574c98cadbceda59aa5, type: 3}
       propertyPath: m_Name
       value: alienRed

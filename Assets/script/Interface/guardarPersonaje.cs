@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class guardarPersonaje : MonoBehaviour
 {
@@ -8,6 +9,16 @@ public class guardarPersonaje : MonoBehaviour
     public bool alienGreen;
     public bool alienRed;
     public bool alienYellow;
+    public GameObject AlienGreen;
+    public GameObject AlienRed;
+    public GameObject AlienYellow;
+    public CinemachineVirtualCamera virtualCamera;
+
+
+    private void Start()
+    {
+        personajeGreen();
+    }
 
     private void Update()
     {
@@ -27,6 +38,7 @@ public class guardarPersonaje : MonoBehaviour
         alienRed = false;
         alienGreen = false;
         Guardar();
+        virtualCamera.Follow = AlienYellow.transform;
     }
 
     public void personajeGreen()
@@ -35,6 +47,7 @@ public class guardarPersonaje : MonoBehaviour
         alienRed = false;
         alienYellow = false;
         Guardar();
+        virtualCamera.Follow = AlienGreen.transform;
     }
 
     public void personajeRed()
@@ -43,6 +56,7 @@ public class guardarPersonaje : MonoBehaviour
         alienYellow = false;
         alienGreen = false;
         Guardar();
+        virtualCamera.Follow = AlienRed.transform;
     }
 
     public void Guardar()
@@ -53,5 +67,6 @@ public class guardarPersonaje : MonoBehaviour
         menuPersonaje.SetActive(false);
         Time.timeScale = 1;
     }
+
 
 }

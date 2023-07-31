@@ -15,13 +15,7 @@ public class player : MonoBehaviour, ITakeDamage
     protected bool interact;
     [SerializeField]
     private GameObject menuPersonaje;
-    [SerializeField]
-    protected Transform ubicacionPlayer;
-    public float distanceBeetween;
-
-    public float distance;
-
-
+  
     protected virtual void Movilidad()
     {
 
@@ -29,12 +23,7 @@ public class player : MonoBehaviour, ITakeDamage
 
         horizontalforce *= Time.deltaTime;
         transform.Translate(horizontalforce, 0, 0);
-
-        if (distance < distanceBeetween)
-        {
-            transform.position = Vector2.MoveTowards(this.transform.position, ubicacionPlayer.transform.position, horizontalforce * Time.deltaTime);
-        }
-        
+  
     }
 
     public virtual void TakeDamage(int damage)
