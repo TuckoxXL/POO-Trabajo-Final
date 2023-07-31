@@ -10,7 +10,6 @@ public class Bullet : MonoBehaviour
     [SerializeField]
     private int bulletDamage = 10;
 
-    // Start is called before the first frame update
     void Start()
     {
         bullet = gameObject.GetComponent<Rigidbody2D>();
