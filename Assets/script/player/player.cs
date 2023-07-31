@@ -12,8 +12,6 @@ public class player : MonoBehaviour, ITakeDamage
     [SerializeField]
     protected float horizontalforce;
     [SerializeField]
-    protected bool interact;
-    [SerializeField]
     private GameObject menuPersonaje;
   
     protected virtual void Movilidad()
@@ -37,7 +35,7 @@ public class player : MonoBehaviour, ITakeDamage
 
     protected virtual void Interact()
     {
-        if (Input.GetKeyDown(KeyCode.E) && interact == false)
+        if (Input.GetKeyDown(KeyCode.E))
         {
             Debug.Log("toca la E");
             menuPersonaje.SetActive(true);
@@ -54,6 +52,11 @@ public class player : MonoBehaviour, ITakeDamage
         if (other.tag == "limit")
         {
             SceneManager.LoadScene("Derrota");
+        }
+
+        if (other.tag == "final")
+        {
+            SceneManager.LoadScene("Lvl2");
         }
     }
 }
