@@ -19,7 +19,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &539035081295817552
 Transform:
   m_ObjectHideFlags: 0
@@ -102,7 +102,6 @@ MonoBehaviour:
   Forcemultiplier: 10
   vidaPlayer: 0
   horizontalforce: 0
-  interact: 0
   menuPersonaje: {fileID: 0}
 --- !u!70 &1371854476740895929
 CapsuleCollider2D:

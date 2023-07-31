@@ -103,7 +103,6 @@ MonoBehaviour:
   Forcemultiplier: 10
   vidaPlayer: 50
   horizontalforce: 0
-  interact: 0
   menuPersonaje: {fileID: 0}
   bullet: {fileID: 7863970193356750796, guid: daaec3064dd02af40b1341d411a3c1e2, type: 3}
   shotForce: 1000
