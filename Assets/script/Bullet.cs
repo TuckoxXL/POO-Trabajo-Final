@@ -13,21 +13,32 @@ public class Bullet : MonoBehaviour
     void Start()
     {
         bullet = gameObject.GetComponent<Rigidbody2D>();
-       
+
     }
 
     private void FixedUpdate()
     {
-       bullet.AddForce(transform.right * shotForce, ForceMode2D.Impulse);
+        bullet.AddForce(transform.right * shotForce, ForceMode2D.Impulse);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.GetComponent<ITakeDamage>() != null)
+        if (collision.gameObject.GetComponent<ITakeDamage>() != null)
         {
             ITakeDamage col = collision.gameObject.GetComponent<ITakeDamage>();
-                col.TakeDamage(bulletDamage);
+            col.TakeDamage(bulletDamage);
         }
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            Debug.Log("daño al enemigo");
+
+            Destroy(collision.gameObject);
+            Destroy(this.gameObject);
+        }
+
+    }
 }

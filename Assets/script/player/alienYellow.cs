@@ -13,7 +13,7 @@ public class alienYellow : player,ICanAttack
     [SerializeField] 
     private int saltosExtrasRestantes;
     [SerializeField] 
-    private int saltosExtras;
+    private int saltosExtras =1;
     [SerializeField]
     private float jumforce = 7;
     [SerializeField]
@@ -26,19 +26,33 @@ public class alienYellow : player,ICanAttack
         Attack();
         Interact();
         Salto();
-    }
-
-    public void Salto()
-    {
-        if (Input.GetKeyDown(KeyCode.Space) && canjump)
-        {
-            GetComponent<Rigidbody2D>().velocity = new Vector3(0, jumforce, 0);
-            canjump = false;
-        }
 
         if (canjump)
         {
             saltosExtrasRestantes = saltosExtras;
+        }
+    }
+
+    public void Salto()
+    {
+        if (Input.GetKeyDown(KeyCode.Space) && canjump == false)
+        {
+            GetComponent<Rigidbody2D>().velocity = new Vector3(0, jumforce, 0);
+            canjump = true;
+
+            if (Input.GetButtonDown("Jump") && saltosExtrasRestantes > 0)
+            {
+                
+                saltosExtrasRestantes--;
+            }
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Floor"))
+        {
+            canjump = false;
         }
     }
 

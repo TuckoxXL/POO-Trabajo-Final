@@ -12,6 +12,7 @@ TagManager:
   - limit
   - final
   - cubeMapLimiter
+  - Enemy
   layers:
   - Default
   - TransparentFX
