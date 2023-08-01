@@ -30,6 +30,14 @@ public class platformMovement : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("cubeMapLimiter"))
+        {
+            Spin();
+        }
+    }
+
     private void Spin()
     {
         moveRight = !moveRight;

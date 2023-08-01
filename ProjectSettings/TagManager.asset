@@ -11,6 +11,7 @@ TagManager:
   - Diamond
   - limit
   - final
+  - cubeMapLimiter
   layers:
   - Default
   - TransparentFX
