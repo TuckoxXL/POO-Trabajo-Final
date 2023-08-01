@@ -2608,6 +2608,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7711884554392387005, guid: d84a9b0ebe24c734abde7618b2601d9f, type: 3}
   m_PrefabInstance: {fileID: 9056989398225175555}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &636071305 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6061630134167956751, guid: d84a9b0ebe24c734abde7618b2601d9f, type: 3}
+  m_PrefabInstance: {fileID: 9056989398225175555}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &682533019 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1705365255365186166, guid: 72c9fb7bd13745e42a2727d7dcac012f, type: 3}
@@ -14305,6 +14310,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1966140431
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1966140432}
+  m_Layer: 0
+  m_Name: Spawnbullet
+  m_TagString: Untagged
+  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1966140432
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1966140431}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.58, y: -0.12, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 636071305}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1969096972
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15500,6 +15536,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3821204864920798067, guid: d84a9b0ebe24c734abde7618b2601d9f, type: 3}
+      propertyPath: jumforce
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3821204864920798067, guid: d84a9b0ebe24c734abde7618b2601d9f, type: 3}
       propertyPath: saltosExtras
       value: 1
       objectReference: {fileID: 0}
@@ -15512,9 +15552,33 @@ PrefabInstance:
       value: -0.037
       objectReference: {fileID: 0}
     - target: {fileID: 4952594618860598811, guid: d84a9b0ebe24c734abde7618b2601d9f, type: 3}
+      propertyPath: jumforce
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4952594618860598811, guid: d84a9b0ebe24c734abde7618b2601d9f, type: 3}
       propertyPath: menuPersonaje
       value: 
       objectReference: {fileID: 1495789958}
+    - target: {fileID: 5667682945425652881, guid: d84a9b0ebe24c734abde7618b2601d9f, type: 3}
+      propertyPath: bullet
+      value: 
+      objectReference: {fileID: 7863970193356750796, guid: daaec3064dd02af40b1341d411a3c1e2, type: 3}
+    - target: {fileID: 5667682945425652881, guid: d84a9b0ebe24c734abde7618b2601d9f, type: 3}
+      propertyPath: jumforce
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5667682945425652881, guid: d84a9b0ebe24c734abde7618b2601d9f, type: 3}
+      propertyPath: shotTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5667682945425652881, guid: d84a9b0ebe24c734abde7618b2601d9f, type: 3}
+      propertyPath: shotForce
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5667682945425652881, guid: d84a9b0ebe24c734abde7618b2601d9f, type: 3}
+      propertyPath: spawnBullet
+      value: 
+      objectReference: {fileID: 1966140432}
     - target: {fileID: 5667682945425652881, guid: d84a9b0ebe24c734abde7618b2601d9f, type: 3}
       propertyPath: menuPersonaje
       value: 
@@ -15529,6 +15593,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 6061630134167956751, guid: d84a9b0ebe24c734abde7618b2601d9f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1966140432}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d84a9b0ebe24c734abde7618b2601d9f, type: 3}
