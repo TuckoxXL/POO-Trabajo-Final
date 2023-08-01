@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Bullet : MonoBehaviour
 {
@@ -38,6 +39,7 @@ public class Bullet : MonoBehaviour
 
             Destroy(collision.gameObject);
             Destroy(this.gameObject);
+            SceneManager.LoadScene("Victoria");
         }
 
     }
